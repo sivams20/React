@@ -6,10 +6,10 @@ import React from "react";
 
 const Greet = (props) => 
 {
-    console.log(props)
+    const {name, role} = props;
     return (
         <div>
-            <h1>Hello {props.name} is a {props.role}</h1>
+            <h1>Hello {name} is a {role}</h1>
             {props.children}
         </div>
     )
