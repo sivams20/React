@@ -5,6 +5,11 @@ import Message from './components/basic/Message';
 import Counter from './components/basic/Counter';
 import ParentComponent from './components/methodprops/ParentComponent';
 import NameList from './components/list/NameList';
+import Stylesheet from './components/style/Stylesheet';
+import Inline from './components/style/Inline';
+
+import './appStyles.css';
+import styles from './appStyles.module.css';
 
 function App() {
   return (
@@ -20,7 +25,15 @@ function App() {
       <Message/> */}
       {/* <Counter/>
       <ParentComponent/> */}
-      <NameList/>
+      {/* <NameList/> */}
+
+      {/*------- Styling --------- */}
+      <h2 className={styles.success}>Success</h2>
+      <h2 className='error'>Error</h2>
+      <Stylesheet/>
+      <Inline/>
+
+
     </div>
   );
 }
