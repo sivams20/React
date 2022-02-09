@@ -10,6 +10,7 @@ import Inline from './components/style/Inline';
 
 import './appStyles.css';
 import styles from './appStyles.module.css';
+import LifecycleA from './components/lifecycle/LifecycleA';
 
 function App() {
   return (
@@ -28,10 +29,13 @@ function App() {
       {/* <NameList/> */}
 
       {/*------- Styling --------- */}
-      <h2 className={styles.success}>Success</h2>
+      {/* <h2 className={styles.success}>Success</h2>
       <h2 className='error'>Error</h2>
       <Stylesheet/>
-      <Inline/>
+      <Inline/> */}
+
+      {/*------- Lifecycle --------- */}
+      <LifecycleA/>
 
 
     </div>
