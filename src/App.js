@@ -11,6 +11,8 @@ import Inline from './components/style/Inline';
 import './appStyles.css';
 import styles from './appStyles.module.css';
 import LifecycleA from './components/lifecycle/LifecycleA';
+import FragmentDemo from './components/fragment/FragmentDemo';
+import ParentComp from './components/pure/parentComp';
 
 function App() {
   return (
@@ -35,8 +37,12 @@ function App() {
       <Inline/> */}
 
       {/*------- Lifecycle --------- */}
-      <LifecycleA/>
+      {/* <LifecycleA/> */}
 
+      {/*------- Fragment Component --------- */}
+      {/* <FragmentDemo/> */}
+
+      <ParentComp/>
 
     </div>
   );
