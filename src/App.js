@@ -13,6 +13,7 @@ import styles from './appStyles.module.css';
 import LifecycleA from './components/lifecycle/LifecycleA';
 import FragmentDemo from './components/fragment/FragmentDemo';
 import ParentComp from './components/pure/parentComp';
+import RefsDemo from './components/refs/RefsDemo';
 
 function App() {
   return (
@@ -42,7 +43,10 @@ function App() {
       {/*------- Fragment Component --------- */}
       {/* <FragmentDemo/> */}
 
-      <ParentComp/>
+      {/*------- Pure components, React memo --------- */}
+      {/* <ParentComp/> */}
+
+      <RefsDemo />
 
     </div>
   );
