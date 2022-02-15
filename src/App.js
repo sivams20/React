@@ -14,6 +14,10 @@ import LifecycleA from './components/lifecycle/LifecycleA';
 import FragmentDemo from './components/fragment/FragmentDemo';
 import ParentComp from './components/pure/parentComp';
 import RefsDemo from './components/refs/RefsDemo';
+import Hero from './components/errors/Hero';
+import ErrorBoundary from './components/errors/ErrorBoundary';
+import ClickCounter from './components/hoc/ClickCounter';
+import HoverCounter from './components/hoc/HoverCounter';
 
 function App() {
   return (
@@ -46,7 +50,23 @@ function App() {
       {/*------- Pure components, React memo --------- */}
       {/* <ParentComp/> */}
 
-      <RefsDemo />
+      {/* <RefsDemo /> */}
+
+      {/*------- Errors --------- */}
+      {/* <ErrorBoundary>
+        <Hero heroName="Batman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+      <Hero heroName="Joker" />
+      </ErrorBoundary> */}
+
+      {/*------- HOC --------- */}
+      <ClickCounter />
+      <HoverCounter />
+
 
     </div>
   );
