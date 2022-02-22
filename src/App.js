@@ -18,6 +18,8 @@ import Hero from './components/errors/Hero';
 import ErrorBoundary from './components/errors/ErrorBoundary';
 import ClickCounter from './components/hoc/ClickCounter';
 import HoverCounter from './components/hoc/HoverCounter';
+import ComponentC from './components/context/ComponentC';
+import { UserProvider } from './components/context/userContext';
 
 function App() {
   return (
@@ -64,10 +66,15 @@ function App() {
       </ErrorBoundary> */}
 
       {/*------- HOC --------- */}
-      <ClickCounter />
-      <HoverCounter />
+      {/* <ClickCounter name="Sivam" />
+      <HoverCounter name="Balu" /> */}
 
+      {/*------- Context --------- */}
 
+      <UserProvider value="Balu">
+        <ComponentC />
+      </UserProvider>
+      
     </div>
   );
 }
