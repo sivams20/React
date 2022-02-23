@@ -20,6 +20,8 @@ import ClickCounter from './components/hoc/ClickCounter';
 import HoverCounter from './components/hoc/HoverCounter';
 import ComponentC from './components/context/ComponentC';
 import { UserProvider } from './components/context/userContext';
+import PostList from './components/http/PostList';
+import PostForm from './components/http/PostForm';
 
 function App() {
   return (
@@ -70,11 +72,16 @@ function App() {
       <HoverCounter name="Balu" /> */}
 
       {/*------- Context --------- */}
-
-      <UserProvider value="Balu">
+      {/* <UserProvider value="Balu">
         <ComponentC />
-      </UserProvider>
-      
+      </UserProvider> */}
+
+      {/*------- HTTP Request --------- */}
+      {/* <PostList/> */}
+      <PostForm />
+
+
+
     </div>
   );
 }
