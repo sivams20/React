@@ -22,6 +22,7 @@ import ComponentC from './components/context/ComponentC';
 import { UserProvider } from './components/context/userContext';
 import PostList from './components/http/PostList';
 import PostForm from './components/http/PostForm';
+import HooksCounter from './components/hooks/HooksCounter';
 
 function App() {
   return (
@@ -78,9 +79,10 @@ function App() {
 
       {/*------- HTTP Request --------- */}
       {/* <PostList/> */}
-      <PostForm />
+      {/* <PostForm /> */}
 
-
+      {/*------- Hooks --------- */}
+      <HooksCounter/>
 
     </div>
   );
