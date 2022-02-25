@@ -23,6 +23,10 @@ import { UserProvider } from './components/context/userContext';
 import PostList from './components/http/PostList';
 import PostForm from './components/http/PostForm';
 import HooksCounter from './components/hooks/HooksCounter';
+import HooksCounterTwo from './components/hooks/HookCounterTwo';
+import HookSateObject from './components/hooks/HookStateObject';
+import HookStateArray from './components/hooks/HookStateArray';
+import HookEffectCounter from './components/hooks/HookEffectCounter';
 
 function App() {
   return (
@@ -82,7 +86,11 @@ function App() {
       {/* <PostForm /> */}
 
       {/*------- Hooks --------- */}
-      <HooksCounter/>
+      {/* <HooksCounter/>
+      <HooksCounterTwo/> */}
+      <HookSateObject/>
+      <HookStateArray/>
+      <HookEffectCounter/>
 
     </div>
   );
