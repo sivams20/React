@@ -27,6 +27,8 @@ import HooksCounterTwo from './components/hooks/HookCounterTwo';
 import HookSateObject from './components/hooks/HookStateObject';
 import HookStateArray from './components/hooks/HookStateArray';
 import HookEffectCounter from './components/hooks/HookEffectCounter';
+import MouseHoverClass from './components/hooks/MouseHoverClass';
+import MouseHoverHook from './components/hooks/MouseHoverHook';
 
 function App() {
   return (
@@ -88,9 +90,12 @@ function App() {
       {/*------- Hooks --------- */}
       {/* <HooksCounter/>
       <HooksCounterTwo/> */}
-      <HookSateObject/>
+      {/* <HookSateObject/>
       <HookStateArray/>
-      <HookEffectCounter/>
+      <HookEffectCounter/> */}
+
+      {/* <MouseHoverClass/> */}
+      <MouseHoverHook/>
 
     </div>
   );
