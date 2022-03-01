@@ -14,6 +14,10 @@ function MouseHoverHook(){
     useEffect(() => {
         console.log('useEffect called...');
         window.addEventListener('mousemove', logMousePosition);
+        return() => {
+            console.log('Component unmount code...');
+            window.removeEventListener('mousemove', logMousePosition);
+        }
     },[]);
 
     return(

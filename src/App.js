@@ -29,6 +29,8 @@ import HookStateArray from './components/hooks/HookStateArray';
 import HookEffectCounter from './components/hooks/HookEffectCounter';
 import MouseHoverClass from './components/hooks/MouseHoverClass';
 import MouseHoverHook from './components/hooks/MouseHoverHook';
+import MouseHoverContainer from './components/hooks/MouseHoverContainer';
+import DataFetching from './components/hooks/http/DataFetching';
 
 function App() {
   return (
@@ -95,7 +97,13 @@ function App() {
       <HookEffectCounter/> */}
 
       {/* <MouseHoverClass/> */}
-      <MouseHoverHook/>
+      {/* <MouseHoverHook/> */}
+
+      {/*------- Cleaning up the task, timer when the component unmounts --------- */}
+      {/* <MouseHoverContainer/> */}
+
+      {/*------- HTTP request using useEffect --------- */}
+      <DataFetching/>
 
     </div>
   );
