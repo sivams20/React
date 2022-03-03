@@ -31,6 +31,7 @@ import MouseHoverClass from './components/hooks/MouseHoverClass';
 import MouseHoverHook from './components/hooks/MouseHoverHook';
 import MouseHoverContainer from './components/hooks/MouseHoverContainer';
 import DataFetching from './components/hooks/http/DataFetching';
+import ReducerCounterOne from './components/hooks/reducers/ReducerCounterOne';
 
 function App() {
   return (
@@ -103,7 +104,10 @@ function App() {
       {/* <MouseHoverContainer/> */}
 
       {/*------- HTTP request using useEffect --------- */}
-      <DataFetching/>
+      {/* <DataFetching/> */}
+
+      {/* ---------- Reducers ----------  */}
+      <ReducerCounterOne />
 
     </div>
   );
