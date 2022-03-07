@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React, { useReducer } from 'react';
 import './App.css';
 import Greet from './components/basic/Greet';
 import Message from './components/basic/Message';
@@ -18,7 +19,7 @@ import Hero from './components/errors/Hero';
 import ErrorBoundary from './components/errors/ErrorBoundary';
 import ClickCounter from './components/hoc/ClickCounter';
 import HoverCounter from './components/hoc/HoverCounter';
-import ComponentC from './components/context/ComponentC';
+// import ComponentC from './components/context/ComponentC';
 import { UserProvider } from './components/context/userContext';
 import PostList from './components/http/PostList';
 import PostForm from './components/http/PostForm';
@@ -32,8 +33,31 @@ import MouseHoverHook from './components/hooks/MouseHoverHook';
 import MouseHoverContainer from './components/hooks/MouseHoverContainer';
 import DataFetching from './components/hooks/http/DataFetching';
 import ReducerCounterOne from './components/hooks/reducers/ReducerCounterOne';
+import ComponentA from './components/hooks/reducercontext/ComponentA';
+import ComponentB from './components/hooks/reducercontext/ComponentB';
+import ComponentC from './components/hooks/reducercontext/ComponentC';
+import DataFetchingReducer from './components/hooks/http/DataFetchingReducer';
+
+export const CountContext = React.createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch(action){
+    case 'increment':
+      return state + 1;
+    case 'decrement':
+      return state - 1;
+    case 'reset':
+      return initialState;
+    default:
+      return state;
+  }
+}
 
 function App() {
+
+  const [count, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className="App">
       {/* <Greet name="sivam" role="Developer">
@@ -107,7 +131,18 @@ function App() {
       {/* <DataFetching/> */}
 
       {/* ---------- Reducers ----------  */}
-      <ReducerCounterOne />
+      {/* <ReducerCounterOne /> */}
+
+      {/* Reducers and Hooks */}
+      {/* <CountContext.Provider value={{ countState: count, countDispatch: dispatch }}>
+        Count -{count}
+        <ComponentA/>
+        <ComponentB/>
+        <ComponentC />
+      </CountContext.Provider> */}
+
+      {/* HTTP Request using Reducers */}
+      <DataFetchingReducer />
 
     </div>
   );
