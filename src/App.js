@@ -4,7 +4,7 @@ import './App.css';
 import Greet from './components/basic/Greet';
 import Message from './components/basic/Message';
 import Counter from './components/basic/Counter';
-import ParentComponent from './components/methodprops/ParentComponent';
+//import ParentComponent from './components/methodprops/ParentComponent';
 import NameList from './components/list/NameList';
 import Stylesheet from './components/style/Stylesheet';
 import Inline from './components/style/Inline';
@@ -37,6 +37,7 @@ import ComponentA from './components/hooks/reducercontext/ComponentA';
 import ComponentB from './components/hooks/reducercontext/ComponentB';
 import ComponentC from './components/hooks/reducercontext/ComponentC';
 import DataFetchingReducer from './components/hooks/http/DataFetchingReducer';
+import ParentComponent from './components/hooks/usecallback/ParentComponent';
 
 export const CountContext = React.createContext();
 
@@ -142,7 +143,10 @@ function App() {
       </CountContext.Provider> */}
 
       {/* HTTP Request using Reducers */}
-      <DataFetchingReducer />
+      {/* <DataFetchingReducer /> */}
+
+      {/* useCallback example */}
+      <ParentComponent />
 
     </div>
   );
