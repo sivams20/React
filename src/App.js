@@ -40,6 +40,8 @@ import DataFetchingReducer from './components/hooks/http/DataFetchingReducer';
 import ParentComponent from './components/hooks/usecallback/ParentComponent';
 import DocTitleOne from './components/hooks/custom/doctitle/DocTitleOne';
 import DocTitleTwo from './components/hooks/custom/doctitle/DocTitleTwo';
+import CounterOne from './components/hooks/custom/counter/CounterOne';
+import CounterTwo from './components/hooks/custom/counter/CounterTwo';
 
 export const CountContext = React.createContext();
 
@@ -151,8 +153,12 @@ function App() {
       {/* <ParentComponent /> */}
 
       {/* Custom Hooks */}
-      <DocTitleOne />
-      <DocTitleTwo />
+      {/* <DocTitleOne />
+      <DocTitleTwo /> */}
+
+      <CounterOne />
+      <CounterTwo />
+
 
 
     </div>
